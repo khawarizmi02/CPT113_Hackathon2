@@ -1,5 +1,5 @@
 # CPT113_Hackathon2
 
-##Game Title: Card Dungeon
+## Game Title: Card Dungeon
 
-###Description
+### Description
