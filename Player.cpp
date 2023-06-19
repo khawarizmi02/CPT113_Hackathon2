@@ -46,3 +46,8 @@ void Player::setDeck(int deck[], int size){
 
   myFile.close();
 }
+
+void PLayer::editPlayerDeck(int value, int pos){
+  card_id[pos] = id; 
+  setDeck(card_id, 20);
+}

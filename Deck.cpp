@@ -89,4 +89,11 @@ void Deck::showMyDeck(){
   }
 }
 
+void Deck::clearDeck(){
+  for (int i = 0; i < 20; i++){
+    card_list[i] = 0;
+    player.editPlayerCard(card_list[i], i);
+  }
+}
+
 

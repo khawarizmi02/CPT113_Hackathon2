@@ -39,7 +39,42 @@ int main () {
 }
 
 void MyDeckMenu(Deck deck){
-  // system("cls");
+  int pick;
+  cout << "My Deck: " << endl;
   deck.showMyDeck();
-  // deck.showCardList();
+
+  cout << endl << endl;
+
+  cout << "Option" << endl;
+  cout << "1. Edit Deck" << endl;
+  cout << "2. Clear Deck" << endl;
+  cout << "3. Show All Cards" << endl;
+  cout << "4. Back" << endl;
+
+  cout << "Enter your choice: ";
+  cin >> pick;
+
+  system("cls");
+  switch (pick) {
+    case 1 : 
+      cout << "Edit your deck: "<< endl;
+      break;
+    case 2 : 
+      cout << "Deck cleared" << endl;
+      MyDeckMenu(deck);
+      break;
+    case 3 : 
+      cout << "Card list" << endl;
+      deck.showCardList();
+      break;
+    case 4 : 
+      main();
+      break;
+    default :
+      cout << "Pick the right number: ";
+      system("cls");
+      MyDeckMenu(deck);
+      break;
+  }
+  // system("cls");
 }

@@ -13,6 +13,7 @@ public:
 
   int getCardId(int i);
   void setDeck(int deck[], int size);
+  void editPlayerCard(int value, int pos);
 
 private:
   int card_id [20];

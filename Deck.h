@@ -23,6 +23,7 @@ class Deck {
 
     void showCardList();
     void showMyDeck();
+    void clearDeck();
 };
 
 #endif // !DECK_H
