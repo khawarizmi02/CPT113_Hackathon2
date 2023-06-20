@@ -1,6 +1,8 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
+#include "LinkedList.h"
+
 #include <string>
 
 using namespace std;
@@ -12,11 +14,16 @@ public:
   ~Player();
 
   int getCardId(int i);
-  void setDeck(int deck[], int size);
-  void editPlayerCard(int value, int pos);
+  void setDeck();
+  void deletePlayerCard(int value);
+  void addPlayerCard(int value);
+  void clearPlayerDeck();
+  int getPlayerDeckSize();
 
 private:
-  int card_id [20];
+  // int card_id [20];
+  LinkedList<int> player_deck;
+
 };
 
 #endif // !PLAYER_H

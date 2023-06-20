@@ -2,6 +2,7 @@
 #define DECK_H
 
 #include "Player.h"
+#include "LinkedList.h"
 
 #include <string>
 
@@ -15,7 +16,9 @@ class Deck {
     int health_attack[50][2];
     string description[50];
     Player player;
-    int card_list[20];
+    // int card_list[20];
+    LinkedList<int> deck_list_id;
+
   
   public:
     Deck();
@@ -24,6 +27,10 @@ class Deck {
     void showCardList();
     void showMyDeck();
     void clearDeck();
+    void removeCard(int value);
+    void addCard(int value);
+    void testList();
+    // void addDeckList();
 };
 
 #endif // !DECK_H

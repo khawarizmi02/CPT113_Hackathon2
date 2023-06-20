@@ -6,7 +6,7 @@
 
 using namespace std;
 
-Player::Player(){
+Player::Player() : player_deck(20) {
   ifstream file("playerDeck.txt");
   if (!file) {
     cout << "Failed to open file." << endl;
@@ -15,22 +15,29 @@ Player::Player(){
   
   int i = 0;
   string line;
-  while (getline(file, line) && i < 20) {
-    file >> card_id[i];
+  int value;
+  while (getline(file, line)) {
+    file >> value;
+    if (value <= 0 ) { break; }
+    player_deck.appendNode(value);
     i++;
   }
   file.close();
 }
 
 Player::~Player(){
-  setDeck(card_id, 20);
+  setDeck();
+}
+
+int Player::getPlayerDeckSize(){
+  return player_deck.getNodeSize();
 }
 
 int Player::getCardId(int i){
-  return card_id[i];
+  return player_deck.getNodeValue(i+1);
 }
 
-void Player::setDeck(int deck[], int size){
+void Player::setDeck(){
 
   ofstream myFile;
   myFile.open("playerDeck.txt", ios::trunc);
@@ -39,15 +46,24 @@ void Player::setDeck(int deck[], int size){
   
   myFile << "ID" << endl;
   int i = 0;
-  while(i < size){
-    myFile << deck[i] << endl;
-    i++;
-  }
-
-  myFile.close();
+  while(i < player_deck.getNodeSize()){
+  myFile << player_deck.getNodeValue(i+1) << endl;
+  i++;
+ }
+ myFile.close();
 }
 
-void PLayer::editPlayerDeck(int value, int pos){
-  card_id[pos] = id; 
-  setDeck(card_id, 20);
+void Player::deletePlayerCard(int value){
+  player_deck.deleteNode(value);
+  setDeck();
+}
+
+void Player::addPlayerCard(int value){
+  player_deck.appendNode(value);
+  setDeck();
+}
+
+void Player::clearPlayerDeck(){
+  player_deck.destroyList();
+  setDeck();
 }
