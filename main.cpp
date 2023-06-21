@@ -116,10 +116,12 @@ void MyEditMenu(Deck deck){
       MyEditMenu(deck);
       break;
     case 3:
+      system("cls");
       MyDeckMenu(deck);
       break;
     default:
       cout << "Pick the right number!!!";
+      system("cls");
       MyEditMenu(deck);
       break;
   }

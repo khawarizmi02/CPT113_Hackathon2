@@ -45,12 +45,8 @@ Deck::Deck() : deck_list_id(20) {
 
     i++;
   }
-    file.close();
+  file.close();
 
-  // get the current deck to Linked List
-  // for (int i = 0; i < 20; i++){
-  //   deck_list_id.appendNode(player.getCardId(i));
-  // }
   i = 0;
   while(i < player.getPlayerDeckSize()){
     deck_list_id.appendNode(player.getCardId(i));

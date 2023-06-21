@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <sstream>
 
 using namespace std;
 
@@ -16,11 +17,15 @@ Player::Player() : player_deck(20) {
   int i = 0;
   string line;
   int value;
+
   while (getline(file, line)) {
-    file >> value;
-    if (value <= 0 ) { break; }
-    player_deck.appendNode(value);
-    i++;
+    if (line.empty()) continue;  // Skip empty lines
+
+    stringstream ss(line);
+    if (ss >> value) {
+      if (value <= 0) break;
+      player_deck.appendNode(value);
+    }
   }
   file.close();
 }
