@@ -2,6 +2,8 @@ main.elf
 exDeck.txt
 playerDeck.txt
 
+*.txt
+
 /ignore
 
 
