@@ -1,12 +1,15 @@
 #include "Deck.h"
 
 #include <iostream>
+#include <iomanip>
 #include <stdlib.h>
+#include <unistd.h>
 
 using namespace std;
 
 void MyDeckMenu(Deck deck);
 void MyEditMenu(Deck deck);
+void StartGame(Deck deck);
 
 int main () {
   cout << "Card Dungeon" << endl;
@@ -23,14 +26,17 @@ int main () {
 
   switch (pick) {
     case 1 : 
-      cout << "You choose: " << pick << endl;
+      system("cls");
+      StartGame(deck);
       break;
     case 2 : 
       system("cls");
       MyDeckMenu(deck);
       break;
     case 3 : 
-      cout << "You choose: " << pick << endl;
+      system("cls");
+      cout << "Closing Game" << endl;
+      usleep(2000000);
       break;
     default :
       cout << "Pick the right number: ";
