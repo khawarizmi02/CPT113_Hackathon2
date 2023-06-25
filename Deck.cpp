@@ -58,6 +58,19 @@ Deck::~Deck(){
   // destructor
 }
 
+void Deck::displayCard(int value){
+
+  int n = value - 1;
+  cout << setw(3) << left << id[n];
+  cout << setw(20) << left << name[n] << setw(8) << right << health_attack[n][0]; 
+  cout << setw(8) << right << health_attack[n][1] << endl;
+}
+
+int Deck::getCardId(int value){
+  // T getNodeValue(int pos);
+  return deck_list_id.getNodeValue(value);
+}
+
 void Deck::showCardList (){
 
   cout << "All cards list: " << endl;

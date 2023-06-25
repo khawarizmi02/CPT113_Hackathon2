@@ -20,9 +20,18 @@ public:
   void clearPlayerDeck();
   int getPlayerDeckSize();
 
+  // gameplay function
+  void resetPlayer();
+  void reduceHealth(int value);
+  void addHealth(int value);
+  int getHealth();
+  int getArmor();
+
+
 private:
-  // int card_id [20];
   LinkedList<int> player_deck;
+  int health;
+  int armor;
 
 };
 

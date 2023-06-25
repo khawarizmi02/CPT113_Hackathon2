@@ -30,6 +30,8 @@ class Deck {
     void removeCard(int value);
     void addCard(int value);
     void testList();
+    int getCardId(int value);
+    void displayCard(int value);
     // void addDeckList();
 };
 

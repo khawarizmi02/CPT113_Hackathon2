@@ -14,7 +14,6 @@ Player::Player() : player_deck(20) {
     return;
   }
   
-  int i = 0;
   string line;
   int value;
 
@@ -28,6 +27,8 @@ Player::Player() : player_deck(20) {
     }
   }
   file.close();
+  health = 20;
+  armor = 0;
 }
 
 Player::~Player(){
@@ -71,4 +72,37 @@ void Player::addPlayerCard(int value){
 void Player::clearPlayerDeck(){
   player_deck.destroyList();
   setDeck();
+}
+
+// gameplay function
+
+void Player::resetPlayer(){
+  health = 20;
+  armor = 0;
+}
+
+void Player::reduceHealth(int value){
+  if (armor > 0 && value < armor){
+    armor = armor - value;
+    return;
+  }
+  if (armor > 0 && value >= armor){
+    value = value - armor;
+    health = health - value;
+    armor = 0;
+    return;
+  }
+  health = health - value;
+}
+
+void Player::addHealth(int value){
+  health = health + value;
+}
+
+int Player::getHealth(){
+  return health;
+}
+
+int Player::getArmor(){
+  return armor;
 }
