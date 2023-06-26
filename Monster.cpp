@@ -9,7 +9,7 @@
 using namespace std;
 
 Monster::Monster() {
-  ifstream file("MonsterList.txt");
+  ifstream file("monster.txt");
   string line;
 
   if (!file.is_open()){
@@ -22,7 +22,7 @@ Monster::Monster() {
   int i = 0;
   while(getline(file,line)){
     istringstream iss(line);
-    iss >> monster_level[i] >> monster_name[i] >> monster_health[i] >> monster_attack[i] >> monster_skill[i];
+    iss >> monster_level[i] >> monster_name[i] >> monster_health[i] >> monster_attack[i] >> monster_skill[i] >> monster_image[i];
     i++;
   }
 
@@ -30,25 +30,36 @@ Monster::Monster() {
 }
 
 void Monster::setMonsterStats(int level){
-  if (level > 5){
-    cout << "Looks like you have beaten all of the monster..." << endl;
-    cout << "Thank you for playing this game" << endl;
-    system("pause");
-    return;
-  }
   current_monster_level = monster_level[level - 1];
   current_monster_name = monster_name[level - 1];
   current_monster_attack = monster_attack[level - 1];
   current_monster_health = monster_health[level - 1];
   current_monster_skill = monster_skill[level - 1];
+  current_monster_image = monster_image[level - 1];
 }
 
 int Monster::getMonsterHealth(){
   return current_monster_health;
 }
 
+int Monster::getMonsterAttack(){
+  return current_monster_attack;
+}
+
 void Monster::displayMonster(){
-  cout << "Monster name: " << current_monster_name << " Health: " << current_monster_health << endl;
+  cout << "Name: " << current_monster_name << " Health: " << current_monster_health << endl;
+  string line;
+  ifstream file(current_monster_image);
+
+  if(!file.is_open()){
+    cout << "Unable to open file" << endl;
+    return;
+  }
+
+  while(getline(file,line)){
+    cout << line << endl;
+  }
+  file.close();
 }
 
 void Monster::reduceHealth(int value, string dmg_type){

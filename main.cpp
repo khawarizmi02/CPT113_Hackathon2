@@ -35,9 +35,7 @@ int main () {
       break;
     case 3 : 
       system("cls");
-      cout << "Closing Game" << endl;
-      usleep(2000000);
-      break;
+      return 0;
     default :
       cout << "Pick the right number: ";
       main();

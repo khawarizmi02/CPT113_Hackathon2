@@ -67,7 +67,6 @@ void Deck::displayCard(int value){
 }
 
 int Deck::getCardId(int value){
-  // T getNodeValue(int pos);
   return deck_list_id.getNodeValue(value);
 }
 
@@ -123,14 +122,13 @@ void Deck::addCard(int value){
   }
   deck_list_id.appendNode(value);
   player.addPlayerCard(value);
-
 }
     // int getIdCard(int pos);
     // int getHealCard(int pos);
     // int getAttackCard(int pos);
 
 int Deck::getIdCard(int pos){
-  return id[pos]; 
+  return deck_list_id.getNodeValue(pos); 
 }
 
 int Deck::getHealCard(int pos){

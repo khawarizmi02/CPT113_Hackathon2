@@ -5,6 +5,8 @@
 #include <iostream>
 #include <iomanip>
 #include <stdlib.h>
+#include <random>
+#include <algorithm>
 
 using namespace std;
 
@@ -25,8 +27,6 @@ using namespace std;
 Game::Game() : hand_list(5){
   player.resetPlayer();
   playerTurn = true;
-
-  setDeck();
 }
 
 bool Game::getResult(){
@@ -36,6 +36,13 @@ bool Game::getResult(){
 void Game::Start(int level){
   cout << "The game is start" << endl;
 
+  if (level > 5){
+    cout << "Looks like you have defeated all of the monsters..." << endl;
+    cout << "Thank you for playing this game :)" << endl;
+    return;
+  }
+
+  setDeck();
   monster.setMonsterStats(level);
   player.resetPlayer();
   setHand5Cards();
@@ -82,7 +89,7 @@ void Game::StartTurn(){
   }
   else {
     cout << "monster's turn" << endl;
-    player.reduceHealth(5);
+    player.reduceHealth(monster.getMonsterAttack());
     system("pause");
     playerTurn = true;
     StartTurn();
@@ -113,7 +120,8 @@ void Game::PlayerChoose(int id){
 }
 
 void Game::setHand5Cards(){
-  int x, i = 0;
+  int x = 0, i = 0;
+  current_deck.pop(x);
   while(i < 5){
     current_deck.pop(x);
     hand_list.appendNode(x);
@@ -136,7 +144,6 @@ void Game::DisplayHand(){
     deck.displayCard(hand_list.getNodeValue(i));
     i++;
   }
-  // hand_list.displayList();
 }
 
 void Game::DrawCard(){
@@ -147,9 +154,28 @@ void Game::DrawCard(){
 }
 
 void Game::setDeck(){
-  int i = 1;
+  int i;
+  // Create an array with 20 elements
+  int arr[20];
+
+  // Assign values from 1 to 20 in order
+  for (i = 0; i < 20; i++) {
+      arr[i] = i + 1;
+  }
+
+  // Shuffle the array using random positions
+  random_device rd;
+  mt19937 gen(rd());
+
+  for (int i = 19; i > 0; i--) {
+      uniform_int_distribution<> dis(0, i);
+      int randomIndex = dis(gen);
+      swap(arr[i], arr[randomIndex]);
+  }
+
+  i = 1;
   while(i <= 20){
-    current_deck.push(deck.getCardId(i));
+    current_deck.push(deck.getCardId(arr[i]));
     i++;
   }
 }
