@@ -5,7 +5,7 @@
 #include "Monster.h"
 #include "Player.h"
 #include "LinkedList.h"
-#include "DynQue.h"
+#include "Stack.h"
 
 #include <iostream>
 #include <stdlib.h>
@@ -30,7 +30,7 @@ public:
 
 private:
   bool playerTurn;
-  DynQue<int> current_deck;
+  Stack<int> current_deck;
   Monster monster;
   Deck deck;
   Player player;

@@ -115,7 +115,7 @@ void Game::PlayerChoose(int id){
 void Game::setHand5Cards(){
   int x, i = 0;
   while(i < 5){
-    current_deck.dequeue(x);
+    current_deck.pop(x);
     hand_list.appendNode(x);
     i++;
   }
@@ -141,7 +141,7 @@ void Game::DisplayHand(){
 
 void Game::DrawCard(){
   int x;
-  current_deck.dequeue(x);
+  current_deck.pop(x);
   hand_list.appendNode(x);
   cout << "You have drawn a card" << endl;
 }
@@ -149,7 +149,7 @@ void Game::DrawCard(){
 void Game::setDeck(){
   int i = 1;
   while(i <= 20){
-    current_deck.enqueue(deck.getCardId(i));
+    current_deck.push(deck.getCardId(i));
     i++;
   }
 }
