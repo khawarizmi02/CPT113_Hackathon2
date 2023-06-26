@@ -18,22 +18,24 @@ public:
   Game();
   // ~Game();
 
-  void Start();
+  bool getResult();
+  void Start(int level);
   void DisplayHand();
   void DisplayPlayerStat();
   void DrawCard(); 
   void setHand5Cards();
   void setDeck();
   void StartTurn();
+  void PlayerChoose(int id);
 
 private:
   bool playerTurn;
   DynQue<int> current_deck;
-  // int plyr_health, plyr_armor;
   Monster monster;
   Deck deck;
   Player player;
   LinkedList<int> hand_list;
+  bool gameResult;
   
 };
 

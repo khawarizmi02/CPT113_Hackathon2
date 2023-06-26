@@ -24,6 +24,7 @@ public:
   void resetPlayer();
   void reduceHealth(int value);
   void addHealth(int value);
+  void addArmor(int value);
   int getHealth();
   int getArmor();
 

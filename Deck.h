@@ -29,10 +29,14 @@ class Deck {
     void clearDeck();
     void removeCard(int value);
     void addCard(int value);
-    void testList();
     int getCardId(int value);
     void displayCard(int value);
-    // void addDeckList();
+
+    // gameplay function
+    int getIdCard(int pos);
+    int getHealCard(int pos);
+    int getAttackCard(int pos);
+    string getTypeCard(int pos);
 };
 
 #endif // !DECK_H

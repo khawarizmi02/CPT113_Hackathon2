@@ -23,21 +23,22 @@ using namespace std;
   // void clear();
 
 Game::Game() : hand_list(5){
-  // cout << "Hello this is Game() function" << endl;
-  // plyr_health = 20;
-  // plyr_armor = 0;
   player.resetPlayer();
   playerTurn = true;
 
   setDeck();
 }
 
-void Game::Start(){
+bool Game::getResult(){
+  return gameResult;
+}
+
+void Game::Start(int level){
   cout << "The game is start" << endl;
 
+  monster.setMonsterStats(level);
   player.resetPlayer();
   setHand5Cards();
-  monster.displayMonster();
   StartTurn();
 }
 
@@ -48,19 +49,23 @@ void Game::DisplayPlayerStat(){
 }
 
 void Game::StartTurn(){
+  system("cls");
   // check player health
   if (player.getHealth() <= 0){
     cout << "YOU LOSE" << endl;
     cout << "GAME OVER" << endl;
+    gameResult = false;
     return;
   }
   if (monster.getMonsterHealth() <= 0){
     cout << "YOU WIN" << endl;
     cout << "GAME OVER" << endl;
+    gameResult = true;
     return;
   }
 
   DisplayPlayerStat();
+  monster.displayMonster();
 
   if (playerTurn){
     int pick;
@@ -68,7 +73,10 @@ void Game::StartTurn(){
     cout << "Pick a card to use:" ;
     cin >> pick;
     cout << "You Pick card " << pick << endl;
-    monster.reduceHealth(5, "spell");
+    PlayerChoose(pick);
+    // delete card from hand
+    hand_list.deleteNode(pick); 
+    DrawCard();
     playerTurn = false;
     StartTurn();
   }
@@ -81,6 +89,28 @@ void Game::StartTurn(){
   }
 }
 
+void Game::PlayerChoose(int id){
+  system("cls");
+  int pos = id - 1;
+  string type = deck.getTypeCard(pos);
+
+  if (type == "Armor"){
+    player.addArmor(deck.getHealCard(pos));
+    return;
+  }
+  else if (type == "Spell"){
+    monster.reduceHealth(deck.getAttackCard(pos), type);
+    return;
+  }
+  else if (type == "Weapon"){
+    monster.reduceHealth(deck.getAttackCard(pos), type);
+    return;
+  }
+  else if (type == "Potion"){
+    player.addHealth(deck.getHealCard(pos));
+    return;
+  }
+}
 
 void Game::setHand5Cards(){
   int x, i = 0;
@@ -96,7 +126,7 @@ void Game::setHand5Cards(){
 }
 
 void Game::DisplayHand(){
-  cout << "Hello this is the available card to use" << endl;
+  cout << "This is the available card to use" << endl;
   cout << setw(3) << left << "ID";
   cout << setw(20) << left << "Name" << setw(8) << right << "Damage"; 
   cout << setw(8) << right << "Heal" << endl;
@@ -110,6 +140,9 @@ void Game::DisplayHand(){
 }
 
 void Game::DrawCard(){
+  int x;
+  current_deck.dequeue(x);
+  hand_list.appendNode(x);
   cout << "You have drawn a card" << endl;
 }
 

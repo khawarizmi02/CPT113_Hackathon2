@@ -12,11 +12,19 @@ using namespace std;
 
 int main(); // function prototype
 
-void StartGame(Deck deck){
+void StartGame(Deck deck, int level){
   Game game;
-  game.Start();
+  game.Start(level);
+  if (!game.getResult()){
+    system("pause");
+    main();
+  }
+  char pick;
+  cout << "Do you want to continue (y/n): ";
+  cin >> pick;
 
-  system("pause");
+  if (pick == 'n'){ main(); }
+  else { StartGame(deck, level + 1); }
 }
 
 // void StartGame(Deck deck){ 

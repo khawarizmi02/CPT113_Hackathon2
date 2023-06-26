@@ -125,18 +125,23 @@ void Deck::addCard(int value){
   player.addPlayerCard(value);
 
 }
+    // int getIdCard(int pos);
+    // int getHealCard(int pos);
+    // int getAttackCard(int pos);
 
-void Deck::testList(){
-  // deck_list_id 
-  // void appendNode(T value);
-  // void deleteNode(T value);
-  // T getNodeValue(int pos);
-  // void displayList() const;
-  // void destroyList();
-
-  deck_list_id.displayList();
-  cout << endl;
-  cout <<   deck_list_id.getNodeSize() << endl;
-  cout << endl;
-  cout <<   deck_list_id.getMaxNodeSize() << endl;
+int Deck::getIdCard(int pos){
+  return id[pos]; 
 }
+
+int Deck::getHealCard(int pos){
+  return health_attack[pos][1]; 
+}
+
+int Deck::getAttackCard(int pos){
+  return health_attack[pos][0]; 
+}
+
+string Deck::getTypeCard(int pos){
+  return type[pos];
+}
+

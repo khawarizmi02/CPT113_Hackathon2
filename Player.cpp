@@ -99,6 +99,10 @@ void Player::addHealth(int value){
   health = health + value;
 }
 
+void Player::addArmor(int value){
+  armor += value;
+}
+
 int Player::getHealth(){
   return health;
 }

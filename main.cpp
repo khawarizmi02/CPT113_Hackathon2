@@ -9,7 +9,7 @@ using namespace std;
 
 void MyDeckMenu(Deck deck);
 void MyEditMenu(Deck deck);
-void StartGame(Deck deck);
+void StartGame(Deck deck,int level);
 
 int main () {
   cout << "Card Dungeon" << endl;
@@ -27,7 +27,7 @@ int main () {
   switch (pick) {
     case 1 : 
       system("cls");
-      StartGame(deck);
+      StartGame(deck, 1);
       break;
     case 2 : 
       system("cls");

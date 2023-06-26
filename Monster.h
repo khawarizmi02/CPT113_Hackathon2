@@ -12,24 +12,25 @@ class Monster
 {
 public:
   Monster();
-  ~Monster();
 
+  void setMonsterStats(int level);
+  void monsterChallengeMode(int level);
   void reduceHealth(int value, string dmg_type);
   void displayMonster();
   int getMonsterHealth();
 
 private:
-  // int monster_id;
-  string monster_name;
-  int monster_attack;
-  int monster_health;
-  string monster_skill;
+  // to set current monster
+  int current_monster_level;
+  string current_monster_name;
+  int current_monster_attack;
+  int current_monster_health;
+  string current_monster_skill;
+
+  int monster_level[5];
+  string monster_name[5];
+  int monster_attack[5];
+  int monster_health[5];
+  string monster_skill[5];
 };
 #endif // !MONSTER_H
-
-  // int monster_id[5];
-  // string monster_name[5];
-  // int monster_attack[5];
-  // int monster_health[5];
-  // int monster_skill[5];
-
