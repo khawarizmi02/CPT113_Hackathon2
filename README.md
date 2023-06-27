@@ -4,6 +4,18 @@
 
 ### Description
 
+### Features
+
+### Gameplay
+
+### Object Oriented Implementation
+
+### LinkedList and Stack Queue Implementation
+
+### Screensshot
+
+### Gameplay Demo Video Link
+
 ### Requirement
 Download [MinGW](https://sourceforge.net/projects/mingw/files/)
 ### CMD
