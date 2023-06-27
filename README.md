@@ -2,6 +2,12 @@
 
 ## Game Title: Card Dungeon
 
+### Group Member:
+
+#### Muhammad Khawarizmi Bin Jefri
+#### Muhamad Hazim Bin Azman
+#### Muhammad Arif Hakimi Bin Shamsul Hisham 155462
+
 ### Description
 
 ### Game Features
