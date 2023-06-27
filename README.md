@@ -93,6 +93,8 @@ Usage:
 ### Screensshot
 
 ### Gameplay Demo Video Link
+CPT113 - Card Dungeon - Game Demo - Group 3
+https://youtu.be/jpAiUn7k7XE
 
 ### Requirement
 Download [MinGW](https://sourceforge.net/projects/mingw/files/)
