@@ -135,7 +135,7 @@ Figure 1.2
 
 Figure 1.2 show the page when the player choose my deck option. The player can see the deck that they will use during their gameplay and they can also choose to edit their deck or show all card that is  available.
 
-![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/arepkimi-patch-4/ss%20gameplay%20image/edit%20card.png)
+![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/main/ss%20gameplay%20image/edit%20card.png)
 Figure 1.3
 
 If they choose to edit their deck the system will give them the choice to add or remove card from their deck just like in figure 1.3. 
