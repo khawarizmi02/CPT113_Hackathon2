@@ -9,6 +9,8 @@
 #### Muhammad Arif Hakimi Bin Shamsul Hisham 155462
 
 ### Description
+Our group aims to bring a deck-oriented crad gameimplementing various power functions.This game requires only one player.Player can
+edit their deck given choices to them.The play needs to defeat the monster given the cards avaiable to them.
 
 ### Game Features
 
@@ -51,6 +53,7 @@ This choice allow the players to check their current deck so they can decided wh
 #### Shuffle Deck
 To increase the game depth and uniqueness of the game the order of cards in the player deck is randomize.For example, at the start of the game or in another monster's level, player’s deck will automatically shuffle by itself. This  will allow the player to use different card in every game making the gameplay more interesting.	
 
+### How to play your game
 
 ### Gameplay
 The gameplay is quite simple where when the player decide to start the game, the system will automatically set player to fight the monster from the first level. Player has to defeat the monster in order to go to the next level.
@@ -58,6 +61,27 @@ The gameplay is quite simple where when the player decide to start the game, the
 Before the fight begin the program will shuffle player's deck. Then, during the fight,at the early turn player will be drawn 5 cards to his hand. After that, each turn the player has to decide to choose a card that is available in hand to either use it for himself or to the monster. This turn will iteratively be made until either monster or player health drop down to zero.
 
 ### Object Oriented Implementation
+There are five class implementing object orie nted program namely Deck.h,DynQue.h,Game.h,Monster.h,Player.h
+
+### Deck.h
+1.This class invented to store card's name,type,health-attack attribute and their description.
+2.There are five function namely ShowCardList, ShowMyDeck, ClearDeck, removeCard and Add_Card.
+
+
+### Monsterr.h
+1.This class containing information regarding Monster's name,attack ,monster health and skil.
+
+### Player.h
+1.This class containing function to reset player, reduce card's health,add card's health,get card's health and get armor.
+
+### Game.h
+1.This class containing function to run the game.
+2.The function included is display hand,display player's stats,show cards, set player's hand,set decks and arranging turns.
+
+### DynQue.h
+
+
+
 
 ### LinkedList and Stack Queue Implementation
 #### Linked List
