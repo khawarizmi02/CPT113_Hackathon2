@@ -130,7 +130,7 @@ Figure 1.1
 
 Figure 1.1 screenshot show the main menu for the game that give option to the player whether they want to start the game, check their deck or exit the program.
 
-![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/arepkimi-patch-4/ss%20gameplay%20image/my%20deck%20option.png)
+![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/main/ss%20gameplay%20image/my%20deck%20option.png)
 Figure 1.2
 
 Figure 1.2 show the page when the player choose my deck option. The player can see the deck that they will use during their gameplay and they can also choose to edit their deck or show all card that is  available.
@@ -140,22 +140,22 @@ Figure 1.3
 
 If they choose to edit their deck the system will give them the choice to add or remove card from their deck just like in figure 1.3. 
 
-![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/arepkimi-patch-4/ss%20gameplay%20image/show%20all%20card.png)
+![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/main/ss%20gameplay%20image/show%20all%20card.png)
 Figure 1.4
 
 The player can see all the card using the show card option.
 
-![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/arepkimi-patch-4/ss%20gameplay%20image/monster%20fight.png)
+![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/main/ss%20gameplay%20image/monster%20fight.png)
 Figure 1.5
 
 Figure 1.5 show the gameplay  where the player need to use the card to fight the generated monster.
 
-![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/arepkimi-patch-4/ss%20gameplay%20image/you%20win.png)
+![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/main/ss%20gameplay%20image/you%20win.png)
 Figure 1.6
 
 If the player win the system will give them choice to continue to the next level or not.
 
-![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/arepkimi-patch-4/ss%20gameplay%20image/you%20lose.png)
+![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/main/ss%20gameplay%20image/you%20lose.png)
 Figure 1.7
 
 If they lose the system will send them to main menu.
