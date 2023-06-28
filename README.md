@@ -76,29 +76,13 @@ b)	Next, addPlayerCard(int value) function is used to enable new card to be adde
 c)	Beside, there is also the clearPlayerDeck() function that can delete the entire deck based on the player’s request. The function calls the destroylist() function from the linked list to remove all the node from the linked list. Then the current empty deck will be update into playerDeck.txt file by the setdeck() function.
 
 #### Stack
-Stack type data structure is use in the game mainly to manage the player’s card in their current hand. The principal that the stack follows is the (LIFO) or Last-in-First-Out, so that the card can be added or removed from the top of the stack.
+Stack type data structure is use in the game mainly to manage the player’s deck during the gameplay. The principal that the stack follows is the (LIFO) or Last-in-First-Out, so that the card can be added or removed from the top of the stack.
 
 Usage:
-1.	The Stack class is used to represent the player’s current usable card during the game.
+1.	The Stack class is used to represent the player’s current deck of cards during the game.
 
-2.	Push(T) function is used to add card on top of the stack that allow players to pick new card during the gameplay.
-
-3.	Furthermore, the pop(T) function is use to remove a card from the top of the stack. This function is used when the player apply a card  in their current hand during fight against the monster.
-
-#### Queue
-If stack represent the player’s current card in their hand, queue represent the deck of card that the player use during the fight against the monster. The queue use First-In-First-Out(FIFO) principal that allow the cards to be added to the rear or tail of the queue and removed from the front.
-
-Usage:
-1.	Firstly the card deck in the game is mange using Queue method.
-
-2.	To add card to the bottom of the deck, the system use enqueue(T) function  so the data can be added to the tail of the used queue.
-
-3.	Next, dequeue(T) function is implemented to make a system that can remove card from the top of the deck. This action happens when the player draw a card from the deck during the gameplay.
-
-
-
-
-
+2.	The pop(T) function is use to remove a card from the top of the deck to move card to the current player's hand. This function is used when one card is used against the monster where the player will draw a new card from the deck to replace the previous used card.
+   
 ### Screensshot
 
 ### Gameplay Demo Video Link
