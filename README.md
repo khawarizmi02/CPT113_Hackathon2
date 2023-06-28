@@ -53,6 +53,9 @@ To increase the game depth and uniqueness of the game the order of cards in the 
 
 
 ### Gameplay
+The gameplay is quite simple where when the player decide to start the game, the system will automatically set player to fight the monster from the first level. Player has to defeat the monster in order to go to the next level.
+ 
+Before the fight begin the program will shuffle player's deck. Then, during the fight,at the early turn player will be drawn 5 cards to his hand. After that, each turn the player has to decide to choose a card that is available in hand to either use it for himself or to the monster. This turn will iteratively be made until either monster or player health drop down to zero.
 
 ### Object Oriented Implementation
 
