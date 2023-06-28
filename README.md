@@ -9,33 +9,33 @@
 #### Muhammad Arif Hakimi Bin Shamsul Hisham 155462
 
 ### Description
-Our group aims to bring a deck-oriented crad gameimplementing various power functions.This game requires only one player.Player can
-edit their deck given choices to them.The play needs to defeat the monster given the cards avaiable to them.
+Our group aims to bring a deck-oriented card game implementing various power functions. This game requires only one player.The player can
+edit their deck given choices to them. The play needs to defeat the monster given the cards available to them.
 
 ### Game Features
 
 #### Ability Type
-The game implemented various ability type into the program to add more depth and strategic planning when the player experiencing the gameplay.
-For the example the ability type that exist in the game is:
+The game implemented various ability types into the program to add more depth and strategic planning when the player experiences the gameplay.
+For example, the ability type that exists in the game is:
 
 1.	Weapon
    
-Weapon card represent normal attack type that player can use to deal damage to the monster. There is various kind of weapon type card that the player can choose to add into their deck. Adding more weapon type card can increase the players offensive ability to fight the generated monster.
+Weapon cards represent normal attack types that the player can use to deal damage to the monster. There is various kind of weapon-type card that the player can choose to add to their deck. Adding more weapon-type cards can increase the player's offensive ability to fight the generated monster.
 
 2.	Spell
 
-Spell is a versatile card type that allow the user to have various effect from its incantation. For example, there are spell that allow user to heal, attack and also providing buff to the players. The downside of using spell is that there exists monster that immune to spell type card.
+The spell is a versatile card type that allows the user to have various effect from its incantation. For example, there are spells that allow user to heal, attack and also provide buff to the players. The downside of using spells is that there exists a monster that is immune to spell-type cards.
 
 3.	Armor
    
-Armor type card is a defensive ability card to improve the players endurance from monster attack. Having an armor type card is a must since it prevents the player from dying.
+Armor type card is a defensive ability card to improve the player's endurance from a monster attack. Having an armor-type card is a must since it prevents the player from dying.
 
 4.	Potion
    
-Potion is a support type card that help the player recover their health that has been      decrease from monster attack. The player can use this card with the armor type card to keep attacking the monster without worrying about monster attack.
+The potion is a support-type card that helps the player recover their health that has been decreased from a monster attack. The player can use this card with the armor-type card to keep attacking the monster without worrying about monster's attack.
 
 #### Monster Level and Type
-To make the game more interesting, the gameplay allow the player to beat various level of monster with different type of skill. For example:
+To make the game more interesting, the gameplay allows the player to beat various levels of monsters with different types of skills. For example:
 
 1.	Monster Level
    
@@ -125,7 +125,7 @@ Usage:
 3.	Furthermore, the pop(T) function is used to draw a card from the top of the deck. This happen when one of the 5 visible card is picked from the player’s   current hand during their fight against the monster. This is because after a card is picked they will leave their current node empty and a card will be drawn from the deck to replace the card.
    
 ### Screensshot
-![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/arepkimi-patch-4/ss%20gameplay%20image/start%20game.png)
+![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/main/ss%20gameplay%20image/start%20game.png)
 Figure 1.1
 
 Figure 1.1 screenshot show the main menu for the game that give option to the player whether they want to start the game, check their deck or exit the program.
