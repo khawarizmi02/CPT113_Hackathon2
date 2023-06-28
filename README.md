@@ -98,73 +98,78 @@ There are five class implementing object orie nted program namely Deck.h,DynQue.
 
 ### LinkedList and Stack Queue Implementation
 #### Linked List
-The linked list method is implemented into the game to represent player’s deck. The usage of linked list allow the player to manipulate the deck efficiently based on their strategy. The implementation can be seen in the LinkedList class from the code.
+The linked list method is implemented into the game to represent the player’s deck. The usage of a linked list allows the player to manipulate the deck efficiently based on their strategy. The implementation can be seen in the LinkedList class from the code.
 
 Usage:
 
 1.	The Player class uses the LinkedList<int> to hold the player's deck of cards. Every node in the linked list represents a card, and each node's value corresponds to the card ID.
 
-2.	The player's deck is manipulated via linked list operations such as append, remove, and retrieve. In the Player class the operation is execute using method such as setDeck(), deletePlayerCard(), addPlayerCard(), and clearPlayerDeck().
+2.	The player's deck is manipulated via linked list operations such as append, remove, and retrieve. In the Player class, the operation is executed using methods such as setDeck(), deletePlayerCard(), addPlayerCard(), and clearPlayerDeck().
 
 For example:
 
-a)	deletePlayerCard(int value) function is use in the Player class to allow the player deleting a card from the given deck. The function delete the card by calling the deleteNode(value) function to remove a node based on their identity which is the Card ID.
+a)	deletePlayerCard(int value) function is used in the Player class to allow the player to delete a card from the given deck. The function deletes the card by calling the deleteNode(value) function to remove a node based on its identity which is the Card ID.
 
-b)	Next, addPlayerCard(int value) function is used to enable new card to be added into the deck. The function call the appendNode(value) function to add new node based on the Card ID to the tail of the linked list. After that, the new deck will be update into the playerDeck.txt file using setdeck() function.
+b)	Next, addPlayerCard(int value) function is used to enable new cards to be added into the deck. The function calls the appendNode(value) function to add a new node based on the Card ID to the tail of the linked list. After that, the new deck will be updated into the playerDeck.txt file using the setdeck() function.
 
-c)	Beside, there is also the clearPlayerDeck() function that can delete the entire deck based on the player’s request. The function calls the destroylist() function from the linked list to remove all the node from the linked list. Then the current empty deck will be update into playerDeck.txt file by the setdeck() function.
+c)	Besides, there is also the clearPlayerDeck() function that can delete the entire deck based on the player’s request. The function calls the destroylist() function from the linked list to remove all the nodes from the linked list. Then the current empty deck will be updated into the playerDeck.txt file by the setdeck() function.
 
 #### Stack
-Stack type data structure is use in the game mainly to manage the player’s deck in during their gameplay. The principal that the stack follows is the (LIFO) or Last-in-First-Out, so that the card can be added or removed from the top of the deck.
+The stack-type data structure is used in the game mainly to manage the player’s deck during their gameplay. The principle that the stack follows is the (LIFO) or Last-in-First-Out so that the card can be added or removed from the top of the deck.
 Usage:
 
 1.	The Stack class is used to represent the player’s current deck during the game.
 
-2.	Push(T) function is used to add card in the deck that allow players to pick new card during the gameplay.
+2.	Push(T) function is used to add cards in the deck that allows players to pick new cards during the gameplay.
 
-3.	Furthermore, the pop(T) function is used to draw a card from the top of the deck. This happen when one of the 5 visible card is picked from the player’s   current hand during their fight against the monster. This is because after a card is picked they will leave their current node empty and a card will be drawn from the deck to replace the card.
+3.	Furthermore, the pop(T) function is used to draw a card from the top of the deck. This happens when one of the 5 visible cards is picked from the player’s   current hand during their fight against the monster. This is because after a card is picked they will leave their current node empty and a card will be drawn from the deck to replace the card.
    
-### Screensshot
+### Screenshot
 ![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/main/ss%20gameplay%20image/start%20game.png)
 Figure 1.1
 
-Figure 1.1 screenshot show the main menu for the game that give option to the player whether they want to start the game, check their deck or exit the program.
+Figure 1.1 screenshot shows the main menu for the game that gives the option to the player whether they want to start the game, check their deck, or exit the program.
 
-![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/arepkimi-patch-4/ss%20gameplay%20image/my%20deck%20option.png)
+![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/main/ss%20gameplay%20image/my%20deck%20option.png)
 Figure 1.2
 
-Figure 1.2 show the page when the player choose my deck option. The player can see the deck that they will use during their gameplay and they can also choose to edit their deck or show all card that is  available.
+Figure 1.2 show the page when the player chooses My deck option. The player can see the deck that they will use during their gameplay and they can also choose to edit their deck or show all card that is  available.
 
 ![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/main/ss%20gameplay%20image/edit%20card.png)
 Figure 1.3
 
-If they choose to edit their deck the system will give them the choice to add or remove card from their deck just like in figure 1.3. 
+If they choose to edit their deck the system will give them the choice to add or remove cards from their deck just like in Figure 1.3. 
 
-![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/arepkimi-patch-4/ss%20gameplay%20image/show%20all%20card.png)
+![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/main/ss%20gameplay%20image/show%20all%20card.png)
 Figure 1.4
 
-The player can see all the card using the show card option.
+The player can see all the cards using the show card option.
 
-![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/arepkimi-patch-4/ss%20gameplay%20image/monster%20fight.png)
+![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/main/ss%20gameplay%20image/monster%20fight.png)
 Figure 1.5
 
-Figure 1.5 show the gameplay  where the player need to use the card to fight the generated monster.
+Figure 1.5 show the gameplay  where the player needs to use the card to fight the generated monster.
 
-![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/arepkimi-patch-4/ss%20gameplay%20image/you%20win.png)
+![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/main/ss%20gameplay%20image/you%20win.png)
 Figure 1.6
 
-If the player win the system will give them choice to continue to the next level or not.
+If the player wins the system will give them the choice to continue to the next level or not.
 
-![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/arepkimi-patch-4/ss%20gameplay%20image/you%20lose.png)
+![alt text](https://github.com/khawarizmi02/CPT113_Hackathon2/blob/main/ss%20gameplay%20image/you%20lose.png)
 Figure 1.7
 
-If they lose the system will send them to main menu.
+If they lose the system will send them to the main menu.
 
 
 ### Gameplay Demo Video Link
 CPT113 - Card Dungeon - Game Demo - Group 3
 
 [YouTube Link](https://youtu.be/jpAiUn7k7XE)
+
+### Bugs and improvements that need to be fixed
+1.   When the player has done a fight with the monster, the player cannot exit the program through the command where the program will make the player fight the monster again.
+2.   Some lists of the card available can be redundant due to a lack of ideas to create a card differently. So, players can have more than 1 same card in their deck setup.
+3.   Some test cases such as player-only can pick one available card in their hand. But this program also allows players to pick a card that is also outside of their hand.
 
 ### Requirement
 Download [MinGW](https://sourceforge.net/projects/mingw/files/)
