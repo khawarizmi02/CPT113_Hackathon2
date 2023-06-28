@@ -76,14 +76,44 @@ b)	Next, addPlayerCard(int value) function is used to enable new card to be adde
 c)	Beside, there is also the clearPlayerDeck() function that can delete the entire deck based on the player’s request. The function calls the destroylist() function from the linked list to remove all the node from the linked list. Then the current empty deck will be update into playerDeck.txt file by the setdeck() function.
 
 #### Stack
-Stack type data structure is use in the game mainly to manage the player’s deck during the gameplay. The principal that the stack follows is the (LIFO) or Last-in-First-Out, so that the card can be added or removed from the top of the stack.
+Stack type data structure is use in the game mainly to manage the player’s deck in during their gameplay. The principal that the stack follows is the (LIFO) or Last-in-First-Out, so that the card can be added or removed from the top of the deck.
+Usage
+1.	The Stack class is used to represent the player’s current deck during the game.
 
-Usage:
-1.	The Stack class is used to represent the player’s current deck of cards during the game.
+2.	Push(T) function is used to add card in the deck that allow players to pick new card during the gameplay.
 
-2.	The pop(T) function is use to remove a card from the top of the deck to move card to the current player's hand. This function is used when one card is used against the monster where the player will draw a new card from the deck to replace the previous used card.
+3.	Furthermore, the pop(T) function is used to draw a card from the top of the deck. This happen when one of the 5 visible card is picked from the player’s   current hand during their fight against the monster. This is because after a card is picked they will leave their current node empty and a card will be drawn from the deck to replace the card.
    
 ### Screensshot
+![alt text]()
+Figure 1.1
+
+Figure 1.1 screenshot show the main menu for the game that give option to the player whether they want to start the game, check their deck or exit the program.
+![alt text]()
+Figure 1.2
+
+Figure 1.2 show the page when the player choose my deck option. The player can see the deck that they will use during their gameplay and they can also choose to edit their deck or show all card that is  available.
+![alt text]()
+Figure 1.3
+
+If they choose to edit their deck the system will give them the choice to add or remove card from their deck just like in figure 1.3. 
+![alt text]()
+Figure 1.4
+
+The player can see all the card using the show card option.
+![alt text]()
+Figure 1.5
+
+Figure 1.5 show the gameplay  where the player need to use the card to fight the generated monster.
+![alt text]()
+Figure 1.6
+
+If the player win the system will give them choice to continue to the next level or not.
+![alt text]()
+Figure 1.7
+
+If they lose the system will send them to main menu.
+
 
 ### Gameplay Demo Video Link
 CPT113 - Card Dungeon - Game Demo - Group 3
