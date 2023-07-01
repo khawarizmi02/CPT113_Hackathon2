@@ -1,0 +1,6 @@
+ID Name Health Attack Skill Source
+1	LEVEL1MONSTER	20	2	NORMAL  source/monster-image-1.txt
+2	LEVEL2MONSTER	40	3	Spell source/monster-image-2.txt
+3	LEVEL3MONSTER	50	8	Weapon  source/monster-image-3.txt
+4	LEVEL4MONSTER	50	6	Spell source/monster-image-4.txt
+5	LEVEL5MONSTER	70	5 Weapon  source/monster-image-5.txt	
