@@ -5,9 +5,13 @@
 ### Description
 
 ### Requirement
+
+Download chocolatey package manager
 Download [MinGW](https://sourceforge.net/projects/mingw/files/)
+
 ### CMD
+
 ```bash
-g++ main.cpp StartGame.cpp Deck.cpp Deck.h Player.h Game.cpp Game.h Player.cpp Monster.h Monster.cpp LinkedList.h DynQue.h -o main.elf
+g++ src/*.cpp header/*.h -o main.elf
 ./.main.elf
 ```
