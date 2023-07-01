@@ -1,6 +1,6 @@
-#include "Game.h"
-#include "Deck.h"
-#include "Monster.h"
+#include "../header/Game.h"
+#include "../header/Deck.h"
+#include "../header/Monster.h"
 
 #include <iostream>
 #include <iomanip>

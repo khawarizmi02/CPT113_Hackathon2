@@ -1,4 +1,4 @@
-#include "Deck.h"
+#include "../header/Deck.h"
 
 #include <iostream>
 #include <iomanip>

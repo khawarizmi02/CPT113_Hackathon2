@@ -1,4 +1,4 @@
-#include "Player.h"
+#include "../header/Player.h"
 
 #include <iostream>
 #include <string>
@@ -8,7 +8,7 @@
 using namespace std;
 
 Player::Player() : player_deck(20) {
-  ifstream file("playerDeck.txt");
+  ifstream file("data/playerDeck.txt");
   if (!file) {
     cout << "Failed to open file." << endl;
     return;
@@ -46,9 +46,9 @@ int Player::getCardId(int i){
 void Player::setDeck(){
 
   ofstream myFile;
-  myFile.open("playerDeck.txt", ios::trunc);
+  myFile.open("data/playerDeck.txt", ios::trunc);
   myFile.close();
-  myFile.open("playerDeck.txt");
+  myFile.open("data/playerDeck.txt");
   
   myFile << "ID" << endl;
   int i = 0;

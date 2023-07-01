@@ -1,6 +1,6 @@
-#include "Deck.h"
-#include "Player.h"
-#include "LinkedList.h"
+#include "../header/Deck.h"
+#include "../header/Player.h"
+#include "../header/LinkedList.h"
 
 #include <iostream>
 #include <iomanip>
@@ -11,7 +11,7 @@
 using namespace std;
 
 Deck::Deck() : deck_list_id(20) {
-  ifstream file("cards.txt");
+  ifstream file("data/cards.txt");
   if (!file) {
       cout << "Failed to open file." << endl;
       return;

@@ -1,4 +1,4 @@
-#include "Monster.h"
+#include "../header/Monster.h"
 
 #include <sstream>
 #include <iostream>
@@ -9,7 +9,7 @@
 using namespace std;
 
 Monster::Monster() {
-  ifstream file("monster.txt");
+  ifstream file("data/monster.txt");
   string line;
 
   if (!file.is_open()){
