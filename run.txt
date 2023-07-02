@@ -1,2 +1,1 @@
 g++ src/*.cpp header/*.h -o main.elf
-./main.elf
